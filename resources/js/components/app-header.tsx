@@ -29,10 +29,6 @@ export function AppHeader() {
                     <SearchForm />
                 </div>
                 <div className="flex items-center gap-2 px-4">
-                    <UserDropdown user={user} />
-                    <Separator
-                        orientation="vertical"
-                        className="mr-2 data-[orientation=vertical]:h-4"/>
                     <Button
                         data-sidebar="trigger"
                         data-slot="sidebar-trigger"
@@ -43,6 +39,10 @@ export function AppHeader() {
                         <MailIcon />
                         <span className="sr-only">Open Emails</span>
                     </Button>
+                    <Separator
+                        orientation="vertical"
+                        className="mr-2 data-[orientation=vertical]:h-4"/>
+                    <UserDropdown user={user} />
                 </div>
             </header>
         </>

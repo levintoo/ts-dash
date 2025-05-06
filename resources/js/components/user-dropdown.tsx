@@ -50,15 +50,15 @@ export function UserDropdown({
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
+              <ChevronsUpDown className="hidden lg:inline ml-auto size-4" />
+              <div className="hidden lg:grid flex-1 text-right leading-tight">
+                <span className="truncate font-medium text-xs">{user.name}</span>
+                <span className="truncate text-xs">{user.email}</span>
+              </div>
               <Avatar className="size-8 rounded-lg">
                 <AvatarImage src={user.avatar} alt={user.name} />
                 <AvatarFallback className="rounded-lg">CN</AvatarFallback>
               </Avatar>
-              <div className="hidden lg:grid flex-1 text-left leading-tight">
-                <span className="truncate font-medium text-xs">{user.name}</span>
-                <span className="truncate text-xs">{user.email}</span>
-              </div>
-              <ChevronsUpDown className="hidden lg:inline ml-auto size-4" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
